@@ -234,7 +234,7 @@ end
  end
 end 
 end
-rebound_num
+#rebound_num
 end 
 
 # player_name = names.select {|k,v| v[:shoe] == other_variant_shoe} 

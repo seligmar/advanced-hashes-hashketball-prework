@@ -146,55 +146,55 @@ name_by_shoesize
 end
 
  def team_colors(team_name)
-  answer = []
-  game_hash.each do |locale, info|
-    if info.values.include?(team_name)
-      i = 0
-      while i < info[:colors].length
-      answer << (info[:colors]).pop do
-      i += 1
+     answer = []
+     game_hash.each do |locale, info|
+      if info.values.include?(team_name)
+        i = 0
+          while i < info[:colors].length
+            answer << (info[:colors]).pop do
+        i += 1
+      end
     end
   end
-end
 end
 answer
 end
 
 def team_names
-  answer = []
-  game_hash.each do |locale, info|
-    answer << info[:team_name]
-end
-answer
+    answer = []
+    game_hash.each do |locale, info|
+      answer << info[:team_name]
+    end
+  answer
 end
 
 def player_numbers(team_name)
     numbers = []
-      game_hash.each do |locale, info|
+    game_hash.each do |locale, info|
       new = info[:players]
-      new.each do |names|
-        names.each do |name_strings, nested_hash|
-        if info.values.include?(team_name)
-          numbers << nested_hash[:number]
-     end
-     end
+        new.each do |names|
+          names.each do |name_strings, nested_hash|
+            if info.values.include?(team_name)
+              numbers << nested_hash[:number]
+          end
+        end
+      end
     end
-  end
-numbers
+  numbers
 end
 
 
 def player_stats(name)
-   stats = {}
-      game_hash.each do |locale, info|
+    stats = {}
+    game_hash.each do |locale, info|
       new = info[:players]
-      new.each do |names|
+        new.each do |names|
           if names.keys.include?(name)
-          stats = names[name]
-end 
-end
-end 
-stats
+              stats = names[name]
+       end 
+     end
+    end 
+  stats
 end 
 
 def big_shoe_rebounds

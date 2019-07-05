@@ -265,6 +265,19 @@ end
 
 #   array.inject(0){|sum,x| sum + x }
 
+  
+     # new = info[:players]
+    #  binding.pry
+     # new.each do |names| 
+    #  names.each do |name_strings, nested_hash| 
+    #   if locale.keys.include?(:away)  
+        #binding.pry
+          
+    #   else game_hash[:away][ 
+# end
+#end
+#end
+
 def winning_team #find the team with the most points 
   home_team_points = []
   home_team_points_total = []
@@ -286,20 +299,8 @@ def winning_team #find the team with the most points
     away_team_points_total = home_team_points.reduce(:+)
   end
   end 
-  
-     # new = info[:players]
-      binding.pry
-     # new.each do |names| 
-    #  names.each do |name_strings, nested_hash| 
-    #   if locale.keys.include?(:away)  
-        #binding.pry
-          
-    #   else game_hash[:away][ 
-# end
 #end
-#end
-end
-home_team_points
+#home_team_points
 end
 
 ### DO NOT TOUCH BELOW HERE 

@@ -273,8 +273,8 @@ def winning_team #find the team with the most points
       home_team_hash.each do |tntcp, info| #tntcp = team name team color players 
      # new = info[:players]
       binding.pry
-      new.each do |names| 
-      names.each do |name_strings, nested_hash| 
+     # new.each do |names| 
+    #  names.each do |name_strings, nested_hash| 
     #   if locale.keys.include?(:away)  
         #binding.pry
           home_team_points << nested_hash[:points] 

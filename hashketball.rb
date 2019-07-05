@@ -220,6 +220,7 @@ end
   end
   end   
   # ABOVE HERE WORKS TO RETURN THE CORRECT NAME - JUST NEED TO USE NAME TO RETURN CORRECT # OF REBOUNDS 
+  final = []
   game_hash.each do |locale, info|
       new = info[:players]
       new.each do |names|
@@ -230,12 +231,12 @@ end
           final = v[:rebounds]
           binding.pry 
        #   rebound_num = nested_hash[:rebounds]
- # end 
+  end 
  #  end
  end
 end 
 end
-#rebound_num
+final
 end 
 
 # player_name = names.select {|k,v| v[:shoe] == other_variant_shoe} 

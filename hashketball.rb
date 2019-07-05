@@ -304,8 +304,6 @@ def winning_team #find the team with the most points
    end
 end
 
-### DO NOT TOUCH BELOW HERE 
-
 def player_with_longest_name
    name_array = []
    game_hash.each do |locale, info|

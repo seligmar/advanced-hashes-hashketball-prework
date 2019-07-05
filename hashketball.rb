@@ -255,16 +255,16 @@ end
         end
       end
     end 
-name
+  name
 end 
 
 def winning_team  
-  home_team_points = []
-  home_team_points_total = []
-  away_team_points = [] 
-  away_team_points_total = []
-  home_team_array = game_hash[:home][:players]  
-  away_team_array = game_hash[:away][:players] 
+    home_team_points = []
+    home_team_points_total = []
+    away_team_points = [] 
+    away_team_points_total = []
+    home_team_array = game_hash[:home][:players]  
+    away_team_array = game_hash[:away][:players] 
     home_team_array.each do |info|
       info.each do |name_strings, nested_hash|
         home_team_points << nested_hash[:points] 
@@ -277,19 +277,19 @@ def winning_team
     end
     home_team_points_total = home_team_points.reduce(:+)
     away_team_points_total = away_team_points.reduce(:+)
-    if home_team_points_total > away_team_points_total
-      game_hash[:home][:team_name] 
-    else 
-      game_hash[:away][:team_name]
+      if home_team_points_total > away_team_points_total
+          game_hash[:home][:team_name] 
+      else 
+          game_hash[:away][:team_name]
    end
 end
 
 def player_with_longest_name
-   name_array = []
-   game_hash.each do |locale, info|
+    name_array = []
+    game_hash.each do |locale, info|
       new = info[:players]
-      new.each do |names| 
-        name_array = names.keys 
+        new.each do |names| 
+          name_array = names.keys 
       end 
     end 
   longest_name = name_array.max_by {|x| x.length}

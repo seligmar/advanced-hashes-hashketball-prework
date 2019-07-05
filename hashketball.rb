@@ -263,26 +263,26 @@ end
 # h1.assoc "fish"                       # ["fish", "aquatic animal"]
 # h1.select { |k,v| k == "fish" }       # {"fish"=>"aquatic animal"}
 
-  #array.inject(0){|sum,x| sum + x }
+#   array.inject(0){|sum,x| sum + x }
 
-# def winning_team #find the team with the most points 
-#   home_team_points = []
-#   away_team_points = [] 
-#       game_hash.each do |locale, info|
-#       new = info[:players]
-#       new.each do |names| 
-#       names.each do |name_strings, nested_hash| 
-#     #   if locale.keys.include?(:away)  
-#         #binding.pry
-#           home_team_points << nested_hash[:points] 
-#     #   else game_hash[:away][ 
-#           away_team_points << nested_hash[:points] 
-# # end
-# #end
+def winning_team #find the team with the most points 
+  home_team_points = []
+  away_team_points = [] 
+      game_hash.each do |locale, info|
+      new = info[:players]
+      new.each do |names| 
+      names.each do |name_strings, nested_hash| 
+    #   if locale.keys.include?(:away)  
+        #binding.pry
+          home_team_points << nested_hash[:points] 
+    #   else game_hash[:away][ 
+          away_team_points << nested_hash[:points] 
 # end
-# end
-# home_team_points
-# end
+#end
+end
+end
+home_team_points
+end
 
 ### DO NOT TOUCH BELOW HERE 
 

@@ -118,26 +118,24 @@ def game_hash
   }
 end
 
-#all_players = game_hash[:home][:players] + game_hash[:away][:players]
-     # names.each do |name_strings, nested_hash|  returns individual names and the info 
 
 def num_points_scored(name)
     game_hash.each do |locale, info|
       new = info[:players]
-      new.each do |names|
-        if names.keys.include?(name)
-          return names[name][:points] 
+        new.each do |names|
+          if names.keys.include?(name)
+               names[name][:points] 
      end
     end
   end
 end
 
 def shoe_size(name)
-      game_hash.each do |locale, info|
+    game_hash.each do |locale, info|
       new = info[:players]
         new.each do |names|
-        if names.keys.include?(name)
-          return names[name][:shoe] 
+          if names.keys.include?(name)
+               names[name][:shoe] 
      end
     end
   end
@@ -256,29 +254,7 @@ end
 name
 end 
 
-# DO NOT TOUCH ABOVE HERE 
-
-# player_name = names.select {|k,v| v[:shoe] == other_variant_shoe} 
-# h1 = { "fish" => "aquatic animal", "tiger" => "big cat" }
-# h1.assoc "fish"                       # ["fish", "aquatic animal"]
-# h1.select { |k,v| k == "fish" }       # {"fish"=>"aquatic animal"}
-
-#   array.inject(0){|sum,x| sum + x }
-
-  
-     # new = info[:players]
-    #  binding.pry
-     # new.each do |names| 
-    #  names.each do |name_strings, nested_hash| 
-    #   if locale.keys.include?(:away)  
-        #binding.pry
-          
-    #   else game_hash[:away][ 
-# end
-#end
-#end
-
-def winning_team #find the team with the most points 
+def winning_team  
   home_team_points = []
   home_team_points_total = []
   away_team_points = [] 

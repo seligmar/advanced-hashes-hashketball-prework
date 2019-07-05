@@ -302,9 +302,6 @@ def winning_team #find the team with the most points
     else 
       game_hash[:away][:team_name]
    end
-#   end 
-# end
-#home_team_points
 end
 
 ### DO NOT TOUCH BELOW HERE 

@@ -282,7 +282,7 @@ def winning_team #find the team with the most points
           away_team_points << nested_hash[:points] 
 # end
 #end
-end
+#end
 end
 home_team_points
 end

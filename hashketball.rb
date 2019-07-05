@@ -298,9 +298,9 @@ def winning_team #find the team with the most points
     home_team_points_total = home_team_points.reduce(:+)
     away_team_points_total = away_team_points.reduce(:+)
     if home_team_points_total > away_team_points_total
-      game_hash[:home][]
-      
-    #binding.pry
+      game_hash[:home][:team_name] 
+    else 
+      game_hash[:away][:team_name]
    end
 #   end 
 # end

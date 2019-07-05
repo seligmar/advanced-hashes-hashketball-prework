@@ -270,7 +270,7 @@ def winning_team #find the team with the most points
   away_team_points = [] 
   home_team_array = game_hash[:home][:players]  
   away_team_array = game_hash[:away][:players] 
-      home_team_hash.each do |tntcp, info| #tntcp = team name team color players 
+    home_team_array.each do |tntcp, info| #tntcp = team name team color players 
      # new = info[:players]
       binding.pry
      # new.each do |names| 

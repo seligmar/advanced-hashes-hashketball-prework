@@ -195,8 +195,6 @@ end
 stats
 end 
 
-# DO NOT TOUCH ABOVE HERE 
-
 def big_shoe_rebounds
   shoe_sizes = []
   game_hash.each do |locale, info|
@@ -219,7 +217,6 @@ end
    end
   end
   end   
-  # ABOVE HERE WORKS TO RETURN THE CORRECT NAME - JUST NEED TO USE NAME TO RETURN CORRECT # OF REBOUNDS 
   final = []
   game_hash.each do |locale, info|
       new = info[:players]
@@ -232,6 +229,21 @@ end
 end 
 end
 final
+end 
+
+# DO NOT TOUCH ABOVE HERE 
+
+ def most_points_scored
+   points = []
+   game_hash.each do |locale, info|
+      new = info[:players]
+      new.each do |names| 
+      names.each do |name_strings, nested_hash| 
+    end 
+  end 
+end 
+  most_points = points.max
+most_points
 end 
 
 # player_name = names.select {|k,v| v[:shoe] == other_variant_shoe} 
@@ -259,21 +271,6 @@ end
 # end
 # home_team_points
 # end
- 
- 
- 
- def most_points_scored
-   points = []
-   game_hash.each do |locale, info|
-      new = info[:players]
-      new.each do |names| 
-      names.each do |name_strings, nested_hash| 
-    end 
-  end 
-end 
-  most_points = points.max
-most_points
-end 
 
 ### DO NOT TOUCH BELOW HERE 
 

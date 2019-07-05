@@ -268,7 +268,8 @@ end
 def winning_team #find the team with the most points 
   home_team_points = []
   away_team_points = [] 
-      game_hash.each do |locale, info|
+      game_hash.each do |locale, info| 
+        
       new = info[:players]
       new.each do |names| 
       names.each do |name_strings, nested_hash| 

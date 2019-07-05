@@ -276,7 +276,12 @@ def winning_team #find the team with the most points
         home_team_points << nested_hash[:points] 
       end
     end
-    home_team_points.reduce(:+)
+    away_team_array.each do |info|
+      info.each do |name_strings, nested_hash|
+        away_team_points << nested_hash[:points] 
+    home_team_points_total = home_team_points.reduce(:+)
+  end 
+  
      # new = info[:players]
       binding.pry
      # new.each do |names| 

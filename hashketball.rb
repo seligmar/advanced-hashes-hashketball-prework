@@ -297,16 +297,16 @@ longest_name
 end 
 
 def long_name_steals_a_ton?
-  longest_name = player_with_longest_name
-  longest_name_steals = []
-  array_of_steals = []
-  game_hash.each do |locale, info|
+    longest_name = player_with_longest_name
+    longest_name_steals = []
+    array_of_steals = []
+    game_hash.each do |locale, info|
       new = info[:players]
-      new.each do |names| 
-      names.each do |name_strings, nested_hash| 
-        array_of_steals << nested_hash[:steals] 
-       if names.keys.include?(longest_name)
-          longest_name_steals << names[longest_name][:steals]    
+        new.each do |names| 
+          names.each do |name_strings, nested_hash| 
+            array_of_steals << nested_hash[:steals] 
+              if names.keys.include?(longest_name)
+                longest_name_steals << names[longest_name][:steals]    
           end 
         end
       end 

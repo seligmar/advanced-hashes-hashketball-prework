@@ -251,7 +251,10 @@ end
       names.select do |k,v| 
         if v[:points] == most_points 
           name = k 
-most_points
+        end
+      end
+    end
+name
 end 
 
 # player_name = names.select {|k,v| v[:shoe] == other_variant_shoe} 

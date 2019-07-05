@@ -226,8 +226,7 @@ end
         
         #names.each do |name_strings, nested_hash|
          names.select do |k,v| 
-        if
-          k == name 
+        if k == name 
           final = v[:rebounds]
           binding.pry 
        #   rebound_num = nested_hash[:rebounds]

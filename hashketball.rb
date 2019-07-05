@@ -243,7 +243,14 @@ end
     end 
   end 
 end 
-  most_points = points.max
+    most_points = points.max
+    name = []
+    game_hash.each do |locale, info|
+      new = info[:players]
+      new.each do |names|
+      names.select do |k,v| 
+        if v[:points] == most_points 
+          name = k 
 most_points
 end 
 

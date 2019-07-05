@@ -120,14 +120,16 @@ end
 
 
 def num_points_scored(name)
+  name_by_points = []
     game_hash.each do |locale, info|
       new = info[:players]
         new.each do |names|
           if names.keys.include?(name)
-               names[name][:points] 
+               name_by_points =names[name][:points] 
      end
     end
   end
+name_by_points
 end
 
 def shoe_size(name)

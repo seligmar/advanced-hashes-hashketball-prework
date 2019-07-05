@@ -239,6 +239,7 @@ end
       new = info[:players]
       new.each do |names| 
       names.each do |name_strings, nested_hash| 
+        points << nested_hash[:points]
     end 
   end 
 end 

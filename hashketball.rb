@@ -227,11 +227,11 @@ end
         #names.each do |name_strings, nested_hash|
          names.select do |k,v| 
         if k[:players] == name 
-       #   binding.pry 
+          binding.pry 
        #   rebound_num = nested_hash[:rebounds]
  # end 
 #   end
-# end
+ end
 end 
 end
 rebound_num

@@ -296,9 +296,10 @@ def winning_team #find the team with the most points
       end
     end
     home_team_points_total = home_team_points.reduce(:+)
+  end 
     away_team_points_total = home_team_points.reduce(:+)
   end
-  #end 
+  end 
 #end
 #home_team_points
 end

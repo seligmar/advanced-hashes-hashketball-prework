@@ -231,8 +231,6 @@ end
 final
 end 
 
-# DO NOT TOUCH ABOVE HERE 
-
  def most_points_scored
    points = []
    game_hash.each do |locale, info|
@@ -257,6 +255,8 @@ end
   end 
 name
 end 
+
+# DO NOT TOUCH ABOVE HERE 
 
 # player_name = names.select {|k,v| v[:shoe] == other_variant_shoe} 
 # h1 = { "fish" => "aquatic animal", "tiger" => "big cat" }

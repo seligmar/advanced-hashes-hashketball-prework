@@ -198,44 +198,44 @@ def player_stats(name)
 end 
 
 def big_shoe_rebounds
-  shoe_sizes = []
-  game_hash.each do |locale, info|
+    shoe_sizes = []
+    game_hash.each do |locale, info|
       new = info[:players]
-      new.each do |names|
-      names.each do |name_strings, nested_hash|
-      shoe_sizes << nested_hash[:shoe]
+        new.each do |names|
+          names.each do |name_strings, nested_hash|
+            shoe_sizes << nested_hash[:shoe]
+          end
+        end
+      end
+    name = []
+    other_variant_shoe = shoe_sizes.max 
+    game_hash.each do |locale, info|
+      new = info[:players]
+        new.each do |names|
+          names.select do |k,v| 
+            if v[:shoe] == other_variant_shoe 
+              name = k 
+          end 
+        end
+      end
+    end   
+    final = []
+    game_hash.each do |locale, info|
+      new = info[:players]
+        new.each do |names|
+          names.select do |k,v| 
+            if k == name 
+              final = v[:rebounds]
+          end 
+        end
+      end 
     end
-  end
-end
-  name = []
-  other_variant_shoe = shoe_sizes.max 
-  game_hash.each do |locale, info|
-      new = info[:players]
-      new.each do |names|
-      names.select do |k,v| 
-        if v[:shoe] == other_variant_shoe 
-          name = k 
-     end 
-   end
-  end
-  end   
-  final = []
-  game_hash.each do |locale, info|
-      new = info[:players]
-      new.each do |names|
-      names.select do |k,v| 
-        if k == name 
-          final = v[:rebounds]
-  end 
- end
-end 
-end
-final
+  final
 end 
 
  def most_points_scored
-   points = []
-   game_hash.each do |locale, info|
+     points = []
+     game_hash.each do |locale, info|
       new = info[:players]
       new.each do |names| 
       names.each do |name_strings, nested_hash| 
